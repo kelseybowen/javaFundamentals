@@ -9,20 +9,24 @@ public class TestOrders {
         Item item3 = new Item("drip coffee", 2.0);
         Item item4 = new Item("capuccino", 2.5);
 
-        // Order variables -- order1, order2 etc.
+        // Order variables
 
-        Order order1 = new Order("Cindhuri", item2.getItemPrice(), true, new ArrayList<Item>(Arrays.asList(item2)));
-        
-        Order order2 = new Order("Jimmy", item1.getItemPrice(), true, new ArrayList<Item>(Arrays.asList(item1)));
+        Order order1 = new Order();
+        Order order2 = new Order();
+        Order order3 = new Order("Noah");
+        Order order4 = new Order("Sam");
+        Order order5 = new Order("Jimmy");
 
-        Order order3 = new Order("Noah", item4.getItemPrice(), false, new ArrayList<Item>(Arrays.asList(item4)));
-
-        // Order order4 = new Order("Sam");
-    
         // Application Simulations
-        // Use this example code to test various orders' updates
-        System.out.printf("Name: %s\n", order3.getOrderName());
-        System.out.printf("Total: %s\n", order3.getTotal());
-        System.out.printf("Items: %s\n", order3.getItems());
+
+        System.out.printf("Test: %s\n", order1.getItems());
+        order1.addItem(item3);
+        order1.addItem(item1);
+        order2.setReady(true);
+        System.out.printf("Test: %s\n", order1.getItems());
+        System.out.printf("Ready? %s\n", order2.getStatusMessage());
+        System.out.printf("Total: %s0\n", order1.getOrderTotal());
+        order5.display();
+        System.out.println(order1.getOrderTotal());
     }
 }

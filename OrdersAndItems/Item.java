@@ -8,6 +8,8 @@ public class Item {
         this.price = price;
     }
 
+    // GETTERS & SETTERS
+
     public String getItemName() {
         return name;
     }
